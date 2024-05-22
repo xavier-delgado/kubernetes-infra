@@ -22,7 +22,7 @@ jobs:
         uses: actions/checkout@v4
       
       - name: Terraform init
-        uses: terraform init
+        run: terraform init
 
       - name: Terraform destroy
-        uses: terraform destroy
+        run: terraform destroy -auto-approve
