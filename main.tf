@@ -1,4 +1,11 @@
 terraform {
+
+  backend "s3" {
+    bucket = "xavier-delgado-bucket"
+    key = "mystate"
+    region = "us-east-1"
+  }
+
   required_providers {
     aws = {
       source  = "hashicorp/aws"
