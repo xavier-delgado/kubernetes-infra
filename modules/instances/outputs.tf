@@ -1,9 +1,9 @@
-output "kubemaster_ip" {
-    value = aws_instance.master.public_ip
-    description = "kubemaster public IP"
+output "master_ips" {
+    value = aws_instance.master[*].public_ip
+    description = "master nodes public IP's"
 }
 
-output "node01_ip" {
-    value = aws_instance.node01.public_ip
-    description = "node01 public IP"
+output "worker_ips" {
+    value = aws_instance.worker[*].public_ip
+    description = "worker nodes public IP's"
 }

@@ -1,9 +1,9 @@
-output "kubemaster_ip" {
-    value = module.instances.kubemaster_ip
-    description = "kubemaster public IP"
+output "master_ips" {
+    value = module.instances.master_ips[*]
+    description = "master public IP's"
 }
 
-output "node01_ip" {
-    value = module.instances.node01_ip
-    description = "node01 public IP"
+output "worker_ips" {
+    value = module.instances.worker_ips[*]
+    description = "worker public IP's"
 }

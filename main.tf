@@ -29,4 +29,6 @@ module "instances" {
   
   instance_key = var.instance_key
   security_group_name = module.security_group.security_group_name
+  master_nodes_count = 1
+  worker_nodes_count = 2
 }
